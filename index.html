@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Alpha Builders</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <!-- <meta name="keywords" content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/> -->
+    <meta name="author" content="CodedThemes"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="./assets/images/Alpha-Builders.jpg" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-content">
+            <div class="auth-bg">
+                <span class="r"></span>
+                <span class="r s"></span>
+                <span class="r s"></span>
+                <span class="r"></span>
+            </div>
+
+            <div id="one" class="card">
+                <div class="card-body text-center">
+                    <div class="mb-4" style="display: flex;">
+                        <!-- <button class="btn btn-primary shadow-2 mb-4" onclick="AdminLogin()">Admin</button> -->
+                        <!-- <button class="btn btn-primary shadow-2 mb-4" onclick="EmployeeLogin()">Employee</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AplicantLogin()">Applicant</button> -->
+                        <!-- <button class="btn btn-primary shadow-2 mb-4" onclick="AgentLogin()">Agent</button> -->
+                    </div>
+                    <div class="mb-4">
+                        <i class="feather icon-unlock auth-icon"></i>
+                    </div>
+
+                    <h3 class="mb-4">Admin Login</h3>
+
+                    <form id="adminform" action="">
+                        <div class="input-group mb-3">
+                            <input id="adminid" style="width:310px; height: 42.6px;" type="text" class="" placeholder="admin id">
+                        </div>
+                        <div class="input-group mb-4">
+                            <input id="adminpass" type="password" style="width:310px; height: 42.6px;" class="" placeholder="password">
+                            <i class="fa-regular fa-eye-slash" id="adminPassEye" style="position: absolute; right: 25px; top: 40%; cursor: pointer;"></i>
+                        </div>
+                        <div class="form-group text-left">
+                            <div class="checkbox checkbox-fill d-inline">
+                                <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+                                <label for="checkbox-fill-a1" class="cr"> Save Details</label>
+                            </div>
+                        </div>
+                       <button id="loginButton" onclick="submitAdmin()" class="btn btn-primary shadow-2 mb-4" type="button">Login</button>
+                       <p style="color: red;" id="adminerror" ></p>
+
+                      
+
+
+                    </form>
+                    
+                    
+
+                </div>
+            </div>
+            <div id="two" class="card">
+                <div class="card-body text-center">
+                    <div class="mb-4" style="display: flex;">
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AdminLogin()">Admin</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="EmployeeLogin()">Employee</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AplicantLogin()">Applicant</button>
+                        <!-- <button class="btn btn-primary shadow-2 mb-4" onclick="AgentLogin()">Agent</button> -->
+                    </div>
+                    <div class="mb-4">
+                        <i class="feather icon-unlock auth-icon"></i>
+                    </div>
+                    <h3 class="mb-4">Employee Login</h3>
+                    <div class="input-group mb-3">
+                        <input id="employeeUserId" type="email" style="width:310px; height: 42.6px;" class="" placeholder="Employee Id">
+                    </div>
+                    <div class="input-group mb-4">
+                        <input id="employeePassword" style="width:310px; height: 42.6px;" type="password" class="" placeholder="password"  >
+                        <i class="fa-regular fa-eye-slash" id="employeePassEye" style="position: absolute; right: 25px; top: 40%; cursor: pointer;"></i>
+                    </div>
+                    <div class="form-group text-left">
+                        <div class="checkbox checkbox-fill d-inline">
+                            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+                            <label for="checkbox-fill-a1" class="cr"> Save Details</label>
+                        </div>
+                    </div>
+                    <button onclick="submitEmployee()" class="btn btn-primary shadow-2 mb-4" type="button">Login</button>
+
+                    <p style="color: red;" id="employeeAlert" ></p>
+
+                    <div>
+                        <p  onclick="AgentLogin()" > Are You an agent? <span style="font-weight: bolder;color: black;cursor: pointer;" > Login Here</span></p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="three" class="card">
+                <div class="card-body text-center">
+                    <div class="mb-4" style="display: flex;">
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AdminLogin()">Admin</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="EmployeeLogin()">Employee</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AplicantLogin()">Applicant</button>
+                        <!-- <button class="btn btn-primary shadow-2 mb-4" onclick="AgentLogin()">Agent</button> -->
+                    </div>
+                    <div class="mb-4">
+                        <i class="feather icon-unlock auth-icon"></i>
+                    </div>
+                    <h3 class="mb-4">Applicant Login</h3>
+                    <div class="input-group mb-3">
+                        <input id="applicantLoginId" style="width:310px; height: 42.6px;" type="text" class="" placeholder="Applicant Id">
+                    </div>
+                    <div class="input-group mb-4">
+                        <input type="password" class="" style="width:310px; height: 42.6px;" placeholder="password" id="applicantLoginPass">
+                        <i class="fa-regular fa-eye-slash" id="applicantPassEye" style="position: absolute; right: 25px; top: 40%; cursor: pointer;"></i>
+                    </div>
+                    <div class="form-group text-left">
+                        <!-- <div class="checkbox checkbox-fill d-inline">
+                            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+                            <label for="checkbox-fill-a1" class="cr"> Save Details</label>
+                        </div> -->
+                    </div>
+                    <button onclick="submitApplicant()" class="btn btn-primary shadow-2 mb-4">Login</button>
+
+                    <p style="color: red;" id="applicantAlert" ></p>
+                    <!-- <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p> -->
+                    <!-- <p class="mb-0 text-muted">Don’t have an account? <a  onclick="enquiryform()">Signup</a></p> -->
+                </div>
+            </div>
+
+            <div id="four" class="card">
+                <div class="card-body text-center">
+                    <div class="mb-4" style="display: flex;">
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AdminLogin()">Admin</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="EmployeeLogin()">Employee</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AplicantLogin()">Applicant</button>
+                        <!-- <button class="btn btn-primary shadow-2 mb-4" onclick="AgentLogin()">Agent</button> -->
+                    </div>
+                    <div class="mb-4">
+                        <i class="feather icon-unlock auth-icon"></i>
+                    </div>
+                    <h3 class="mb-4">Agent Login</h3>
+                    <div class="input-group mb-3">
+                        <input id="agentUserId" type="email" style="width:310px; height: 42.6px;" class="" placeholder="Agent Id">
+                    </div>
+                    <div class="input-group mb-4">
+                        <input id="agentPassword" style="width:310px; height: 42.6px;" type="password" class="" placeholder="Agent password"  >
+                        <i class="fa-regular fa-eye-slash" id="employeePassEye" style="position: absolute; right: 25px; top: 40%; cursor: pointer;"></i>
+                    </div>
+                    <div class="form-group text-left">
+                        <div class="checkbox checkbox-fill d-inline">
+                            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+                            <label for="checkbox-fill-a1" class="cr"> Save Details</label>
+                        </div>
+                    </div>
+                    <button onclick="submitAgent()" class="btn btn-primary shadow-2 mb-4" type="button">Login</button>
+                    
+                    <!-- <div>
+                        <p>Are You an agent? <a onclick="AgentLogin()" href="">Login Here</a></p>
+                    </div> -->
+
+                    <p style="color: red;" id="agentAlert" ></p>
+
+                </div>
+            </div>
+            <!-- <div id="four" class="card">
+                <div class="card-body text-center">
+                    <div class="mb-4" style="display: flex;">
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AdminLogin()">Admin</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="EmployeeLogin()">Employee</button>
+                        <button class="btn btn-primary shadow-2 mb-4" onclick="AplicantLogin()">Applicant</button>
+                    </div>
+                    <div class="mb-4">
+                        <i class="feather icon-unlock auth-icon"></i>
+                    </div>
+                    <h3 class="mb-4">Enquiry Form</h3>
+
+                    <form id="myForm" >
+                        <div class="input-group mb-4">
+                            <input id="firstname1" type="text" class="form-control" name="NAME AS PER PASSPORT" placeholder="First Name">
+                        </div>
+                        <div class="input-group mb-4">
+                            <input id="lastname1" type="text" class="form-control" name="NAME AS PER PASSPORT" placeholder="Last Name">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input id="email1" type="email" class="form-control" name="EMAIL ID" placeholder="Email">
+                        </div> -->
+                        <!-- <div class="input-group mb-4">
+                            <input id="passport1" type="text" name="PASSPORT NUMBER" class="form-control" placeholder="Passport">
+                        </div>
+                        <div class="input-group mb-4">
+                            <label for="" class="form-control" >Date Of Birth</label>
+                            <input id="dob1" type="date" class="form-control" name="DATE OF BIRTH" placeholder="Date of birth">
+                        </div>
+                        <div class="input-group mb-4">
+                            <label class="form-control" for="floatingInput">passport issue date</label>
+                            <input id="passportissuedate1" type="date" name="PASSPORT ISSUE DATE" class="form-control" placeholder="Passport Issue Date">
+                            
+                        </div>
+                        <div class="input-group mb-4">
+                            <label for="" class="form-control" >Passport Expiry</label>
+                            <input id="passportexpirydate1" name="PASSPORT EXPIRY DATE" type="date" class="form-control" placeholder="Passport Expiry">
+                        </div>
+                        <div class="input-group mb-4">
+                            <input id="number1" type="number" class="form-control" name="CONTACT NUMBER" placeholder="Contact Number">
+                        </div>
+
+                        <div class="input-group mb-4">
+                            <input id="address1" name="ADDRESS AS PER PASSPORT" type="text" class="form-control" placeholder="Address as per passport">
+                        </div>
+                       
+                       
+                        <div class="input-group mb-4">
+                            <input id="marital1" type="text" class="form-control" name="MARITAL STATUS" placeholder="Marital status">
+                        </div>
+
+                        <div class="input-group mb-4">
+                            <input id="spouse1" type="text" class="form-control" name="Spouse Name" placeholder="Spouse Name">
+                        </div>
+
+                        <div class="input-group mb-4">
+                            <label for="">Upload all the details in PDF</label> <br>
+                            <input class="mt-3" id="upload1" name="MARITAL STATUS" type="file" class="form-control" placeholder="Upload All the details in PDF">
+                        </div>
+                         -->
+                       
+                       
+                       
+
+                    <!-- </form> -->
+                    
+                    <!-- <div class="form-group text-left">
+                        <div class="checkbox checkbox-fill d-inline">
+                            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+                            <label for="checkbox-fill-a1" class="cr"> Save Details</label>
+                        </div>
+                    </div> -->
+                    <!-- <button class="btn btn-primary shadow-2 mb-4" type="but" onclick="submitEnquiry()">Submit</button>
+                    <p id="alertMessage" style="color: red;font-size: 15px;" ></p>
+                     <p class="mb-2 text-muted">Forgot password? <a href="auth-reset-password.html">Reset</a></p> -->
+<!--                     
+                </div>
+            </div> -->
+
+            <script src="./employee/commonApi.js" ></script>
+
+            <script>
+                document.getElementById("two").style.display="none";
+                document.getElementById("three").style.display="none";
+                document.getElementById("four").style.display="none";
+                // document.getElementById("four").style.display="none";
+                function AdminLogin(){
+                    document.getElementById("one").style.display="block";
+                    document.getElementById("two").style.display="none";
+                document.getElementById("three").style.display="none";
+                document.getElementById("four").style.display="none";
+                // document.getElementById("four").style.display="none";
+
+                }
+                function EmployeeLogin(){
+                    document.getElementById("one").style.display="none";
+                    document.getElementById("two").style.display="block";
+                    document.getElementById("three").style.display="none";
+                    document.getElementById("four").style.display="none";
+                // document.getElementById("four").style.display="none";
+
+                }
+                function AplicantLogin(){
+                    document.getElementById("one").style.display="none";
+                    document.getElementById("two").style.display="none";
+                document.getElementById("three").style.display="block";
+                document.getElementById("four").style.display="none";
+                // document.getElementById("four").style.display="none";
+
+                }
+
+                function AgentLogin(){
+                    document.getElementById("one").style.display="none";
+                    document.getElementById("two").style.display="none";
+                document.getElementById("three").style.display="none";
+                document.getElementById("four").style.display="block";
+                // document.getElementById("four").style.display="none";
+
+                }
+                // function enquiryform(){
+                //     document.getElementById("one").style.display="none";
+                //     document.getElementById("two").style.display="none";
+                // document.getElementById("three").style.display="none";
+                // document.getElementById("four").style.display="block";
+
+                // }
+
+
+
+
+
+    function submitAdmin () {
+        
+        var adminid = document.getElementById('adminid').value
+        var adminpass = document.getElementById('adminpass').value
+
+
+        const url = loginApiNew;
+const data = {
+  username: adminid,
+  password: adminpass
+};
+
+fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+})
+.then((response) =>{
+    response.json()
+
+    // var valueOf = response.data.message.rows;
+                // changePage(currentPage);
+                console.log("value of the values in the tasks tab", response);
+
+               
+            if(!adminid || !adminid){
+                document.getElementById('adminerror').innerHTML = 'Please fill in all the details'
+
+            }else if(response.ok == true){
+              
+
+                // var employeeNameSavedFromDbInLs = valueOf[0].name
+                // var employeeOfficeIdSavedFromDbToLogin = valueOf[0]. office_f_id
+                // var employeeUserIdSavedFromDbInLs = valueOf[0].user_id
+                // var employeeUniqueIdSavedFromDbInLsIndex = valueOf[0].id
+                // var employeeEmailAddressSavedInLs = valueOf[0].email;
+                // var employeeDesignationSavedInLs = valueOf[0].designation;
+
+
+
+               
+
+
+            //         var whoCreatedEmployee = 'employeeCreated'
+            
+                
+
+
+                
+            var checkedLoginAdmin = 'isCheckedIn';
+
+localStorage.setItem('integritatAdminLoginCheck',checkedLoginAdmin)
+           
+                // console.log(localStorage.getItem('employeeNameSavedFromDbInLs'))
+                // console.log(localStorage.getItem('employeeOfficeIdSavedFromDbToLogin'))
+
+                
+console.log('Successfylly logged in')
+
+  window.location.href = "./employee/employee.html";
+
+
+             }
+            else if (response.ok == false){
+
+                document.getElementById('adminerror').innerHTML = 'Please enter valid credentials'
+            document.getElementById('adminform').reset()
+
+
+            }
+
+
+} )
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error)); 
+
+    //     const postData = {
+    //     "query": "select * from admin where username='"+adminid+"' AND password ='"+adminpass+"';"
+    // }
+    
+    //     axios.post('http://13.201.145.202:3000/api/v1/users/getQuery', postData)
+    //         .then((response) => {
+    //            var valueOf = response.data.message.rows;
+    //             // changePage(currentPage);
+    //             console.log("value of the values in the tasks tab", valueOf);
+
+               
+    //         if(!adminid || !adminid){
+    //             document.getElementById('adminerror').innerHTML = 'Please fill in all the details'
+
+    //         }else if(valueOf.length > 0){
+              
+
+    //             // var employeeNameSavedFromDbInLs = valueOf[0].name
+    //             // var employeeOfficeIdSavedFromDbToLogin = valueOf[0]. office_f_id
+    //             // var employeeUserIdSavedFromDbInLs = valueOf[0].user_id
+    //             // var employeeUniqueIdSavedFromDbInLsIndex = valueOf[0].id
+    //             // var employeeEmailAddressSavedInLs = valueOf[0].email;
+    //             // var employeeDesignationSavedInLs = valueOf[0].designation;
+
+
+
+               
+
+
+    //                 var whoCreatedEmployee = 'employeeCreated'
+            
+                
+
+
+                
+    //                 var checkedLoginAdmin = 'isCheckedIn';
+
+    //                 localStorage.setItem('integritatAdminLoginCheck',checkedLoginAdmin)
+    //         window.location.href = "./admin/adminLandingPage.html";
+    //             // console.log(localStorage.getItem('employeeNameSavedFromDbInLs'))
+    //             // console.log(localStorage.getItem('employeeOfficeIdSavedFromDbToLogin'))
+
+                
+
+
+
+    //         }else if (valueOf.length == 0){
+
+    //             document.getElementById('adminerror').innerHTML = 'Please enter valid credentials'
+    //         document.getElementById('adminform').reset()
+
+
+    //         }
+    
+                
+    //         })
+        
+
+        
+        }
+
+
+
+
+        // Add event listener for Enter key press
+        document.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                document.getElementById('loginButton').click();
+            }
+        });
+
+
+
+
+
+
+        // Employee Login Function
+
+        function submitEmployee () {
+
+            var employeeUserId = document.getElementById('employeeUserId').value
+            var employeePassword = document.getElementById('employeePassword').value
+
+            
+    
+        const postData = {
+  "query": "select * from employ where user_id='"+employeeUserId+"' AND password='"+employeePassword+"' ;"
+}
+    
+        axios.post(loginApiNew, postData)
+            .then((response) => {
+               var valueOf = response.data.message.rows;
+                // changePage(currentPage);
+                console.log("value of the values in the tasks tab", valueOf);
+
+               
+            if(!employeeUserId || !employeePassword){
+               document.getElementById('employeeAlert').innerHTML = 'Please enter values in the fields'
+
+            }else if(valueOf.length > 0){
+              
+
+                var employeeNameSavedFromDbInLs = valueOf[0].name
+                var employeeOfficeIdSavedFromDbToLogin = valueOf[0]. office_f_id
+                var employeeUserIdSavedFromDbInLs = valueOf[0].user_id
+                var employeeUniqueIdSavedFromDbInLsIndex = valueOf[0].id
+                var employeeEmailAddressSavedInLs = valueOf[0].email;
+                var employeeDesignationSavedInLs = valueOf[0].designation;
+
+                if(employeeDesignationSavedInLs == 'Agent'){
+                    alert('Cannot login here Use the agent login')
+                    window.location.reload()
+                }else{
+
+
+                    var whoCreatedEmployee = 'employeeCreated'
+            
+                localStorage.setItem('employeeNameSavedFromDbInLs',employeeNameSavedFromDbInLs)
+                localStorage.setItem('employeeOfficeIdSavedFromDbToLogin',employeeOfficeIdSavedFromDbToLogin)
+                localStorage.setItem('employeeUserIdSavedFromDbInLs',employeeUserIdSavedFromDbInLs)
+                localStorage.setItem('employeeUniqueIdSavedFromDbInLsIndex',employeeUniqueIdSavedFromDbInLsIndex)
+                localStorage.setItem('employeeEmailAddressSavedInLsFromIndex',employeeEmailAddressSavedInLs)
+                localStorage.setItem('employeeDesignationSavedInLsFromIndex',employeeDesignationSavedInLs)
+
+                localStorage.setItem('employeeWhoCreatedSavedInLs',whoCreatedEmployee)
+               
+
+
+                // Formatted Date
+                var dateNow = new Date();
+                var formattedDate = dateNow.toISOString().slice(0,10);
+                console.log(formattedDate);
+                // Formatted Time
+                // var dateNow = new Date();
+                var options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
+                var formattedLoginTime = dateNow.toLocaleTimeString('en-US', options);
+
+                var userAgent = navigator.userAgent;
+                var platform = navigator.platform;
+                var timezoneOffset = new Date().getTimezoneOffset();
+    
+                // Concatenate these values to create a potential device ID
+                 var deviceId = userAgent + platform + timezoneOffset;
+                console.log('device id is:',deviceId);
+                // console.log(formattedLoginTime);
+
+                const postData = {
+            "query": "INSERT INTO attendance (status, emp_f_id, office_f_id, date, created_at, updated_at, login_time, logout_time, device_id) VALUES ('Active', '"+employeeUniqueIdSavedFromDbInLsIndex+"', '"+employeeOfficeIdSavedFromDbToLogin+"', TO_DATE('"+formattedDate+"', 'YYYY-MM-DD'),NOW() AT TIME ZONE 'UTC' AT TIME ZONE 'IST' ,  NOW() AT TIME ZONE 'UTC' AT TIME ZONE 'IST' , '"+formattedLoginTime+"', NULL, '"+deviceId+"');"
+            };
+        console.log("post data in attendance list is ", postData);
+
+        axios.post('https://gitfunswokhu.in/api/v1/users/getQuery', postData)
+            .then((response) => {
+                console.log('Enquiry Form added successfully :', response.data);
+                alert('Attendance Details added successfully');
+                // console.log('The new username for the applicant is :',username)
+                
+                // window.location.reload();
+               
+                 
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+
+                
+             
+
+            });
+
+       
+
+            var checkedLogin = 'isCheckedIn';
+
+            localStorage.setItem('integritatEmployeeLoginCheck',checkedLogin)
+
+
+           window.location.href = './employee/employee.html';
+           
+                // console.log(localStorage.getItem('employeeNameSavedFromDbInLs'))
+                // console.log(localStorage.getItem('employeeOfficeIdSavedFromDbToLogin'))
+
+                }
+
+
+
+            }else if (valueOf.length == 0){
+
+                document.getElementById('employeeAlert').innerHTML = 'Please enter correct userid and password'
+
+
+            }
+    
+                
+            })
+            
+          
+
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+let applicantPassEye = document.getElementById('applicantPassEye')
+let applicantLoginPass = document.getElementById('applicantLoginPass')
+
+
+let adminPassEye = document.getElementById('adminPassEye')
+let employeePassEye = document.getElementById('employeePassEye')
+
+
+
+// let employeePassword = document.getElementById('employeePassword')
+
+
+employeePassEye.onclick = function () {
+    
+
+    if ( employeePassword.type == 'password'){
+        
+        employeePassword.type = 'text' 
+        
+    } 
+    
+    else {
+        
+        employeePassword.type = 'password'    
+    }
+
+}
+
+
+adminPassEye.onclick = function () {
+    if(adminpass.type == 'password'){
+        adminpass.type = 'text'
+    }else{
+        adminpass.type = 'password'
+    }
+}
+
+
+
+
+    
+    
+
+            </script>
+            
+        </div>
+    </div>
+
+    <!-- Required Js -->
+<script src="assets/js/vendor-all.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</body>
+</html>
